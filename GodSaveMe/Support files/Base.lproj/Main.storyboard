@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6X-QF-0sp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Facts View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FactsViewController" customModule="GodSaveMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-fS-oa9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ipm-pd-BrC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nOf-De-6kM"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SF8-MD-g70">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CG3-fS-oa9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="536-wb-etS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CG3-fS-oa9" secondAttribute="bottom" id="Pyt-PD-JMy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CG3-fS-oa9" secondAttribute="trailing" id="bld-gf-QAl"/>
+                            <constraint firstItem="SF8-MD-g70" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d5a-pK-hi1"/>
+                            <constraint firstItem="SF8-MD-g70" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dXY-fH-wcd"/>
+                            <constraint firstItem="CG3-fS-oa9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oH7-cB-hkA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Факты" id="xeF-LO-cls"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="SF8-MD-g70" id="qQg-kP-HWs"/>
+                        <outlet property="tableView" destination="CG3-fS-oa9" id="P2O-vJ-2mw"/>
+                        <segue destination="t3Z-eT-q6A" kind="show" identifier="goDetail" id="IvH-aQ-sz8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="bEx-nm-PD0" customClass="FactsInitializer" customModule="GodSaveMe" customModuleProvider="target">
+                    <connections>
+                        <outlet property="factsViewController" destination="BYZ-38-t0r" id="eoC-Cg-owS"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="665" y="-595"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="yCS-8h-Duq">
+            <objects>
+                <viewController id="t3Z-eT-q6A" customClass="DetailViewController" customModule="GodSaveMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZ0-Y9-Ifh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" verticalCompressionResistancePriority="800" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-yB-H4h">
+                                <rect key="frame" x="16" y="80" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-Xu-E5a">
+                                <rect key="frame" x="16" y="116.5" width="343" height="434"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" verticalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-EG-Qsf">
+                                <rect key="frame" x="172.5" y="580" width="30" height="30"/>
+                                <connections>
+                                    <action selector="tapFavouriteButton:" destination="t3Z-eT-q6A" eventType="touchUpInside" id="Yuo-za-esz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8yd-yB-H4h" firstAttribute="leading" secondItem="UK3-Il-mno" secondAttribute="leading" constant="16" id="GIG-Tq-vYW"/>
+                            <constraint firstItem="UK3-Il-mno" firstAttribute="trailing" secondItem="8yd-yB-H4h" secondAttribute="trailing" constant="16" id="JRc-eu-dBI"/>
+                            <constraint firstItem="8yd-yB-H4h" firstAttribute="top" secondItem="UK3-Il-mno" secondAttribute="top" constant="16" id="Jbt-Ct-ghe"/>
+                            <constraint firstItem="HsO-Xu-E5a" firstAttribute="leading" secondItem="UK3-Il-mno" secondAttribute="leading" constant="16" id="cqp-lI-3qO"/>
+                            <constraint firstItem="PgU-EG-Qsf" firstAttribute="centerX" secondItem="mZ0-Y9-Ifh" secondAttribute="centerX" id="eHa-2A-fQU"/>
+                            <constraint firstItem="UK3-Il-mno" firstAttribute="trailing" secondItem="HsO-Xu-E5a" secondAttribute="trailing" constant="16" id="hgs-8A-8FI"/>
+                            <constraint firstItem="UK3-Il-mno" firstAttribute="bottom" secondItem="PgU-EG-Qsf" secondAttribute="bottom" constant="8" id="pCm-dI-cvl"/>
+                            <constraint firstItem="HsO-Xu-E5a" firstAttribute="top" secondItem="8yd-yB-H4h" secondAttribute="bottom" constant="16" id="prJ-EX-YIs"/>
+                            <constraint firstItem="PgU-EG-Qsf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HsO-Xu-E5a" secondAttribute="bottom" constant="16" id="vhV-yL-9Wx"/>
+                            <constraint firstItem="HsO-Xu-E5a" firstAttribute="centerY" secondItem="mZ0-Y9-Ifh" secondAttribute="centerY" id="wL5-Z9-QNO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UK3-Il-mno"/>
+                    </view>
+                    <connections>
+                        <outlet property="favouriteButton" destination="PgU-EG-Qsf" id="wIA-io-cJ6"/>
+                        <outlet property="imageView" destination="HsO-Xu-E5a" id="vdV-IO-Rws"/>
+                        <outlet property="textLabel" destination="8yd-yB-H4h" id="SP9-TR-P16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Lv-uv-CaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XQU-T0-S3D" customClass="DetailInitializer" customModule="GodSaveMe" customModuleProvider="target">
+                    <connections>
+                        <outlet property="detailViewController" destination="t3Z-eT-q6A" id="E5e-un-icu"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1513" y="-213"/>
+        </scene>
+        <!--Favourite View Controller-->
+        <scene sceneID="gR8-8w-jIQ">
+            <objects>
+                <viewController id="4fx-Zg-vkI" customClass="FactsViewController" customModule="GodSaveMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oIV-Q2-eMa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4XY-52-s5F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4fx-Zg-vkI" id="oDz-SX-iKK"/>
+                                    <outlet property="delegate" destination="4fx-Zg-vkI" id="0UU-fV-d9d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4XY-52-s5F" firstAttribute="leading" secondItem="iev-RD-dVf" secondAttribute="leading" id="5k4-OQ-SIk"/>
+                            <constraint firstItem="iev-RD-dVf" firstAttribute="trailing" secondItem="4XY-52-s5F" secondAttribute="trailing" id="7p5-5S-mG7"/>
+                            <constraint firstItem="4XY-52-s5F" firstAttribute="top" secondItem="iev-RD-dVf" secondAttribute="top" id="jyv-c7-xvL"/>
+                            <constraint firstItem="iev-RD-dVf" firstAttribute="bottom" secondItem="4XY-52-s5F" secondAttribute="bottom" id="kV2-6i-ux5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iev-RD-dVf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Избранное" id="pjd-Rx-l97"/>
+                    <connections>
+                        <outlet property="tableView" destination="4XY-52-s5F" id="LuU-jD-uuJ"/>
+                        <segue destination="t3Z-eT-q6A" kind="show" identifier="goDetail" id="p7R-wA-kQ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8z-MH-wWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="WaH-56-n6Q" customClass="FavouriteInitializer" customModule="GodSaveMe" customModuleProvider="target">
+                    <connections>
+                        <outlet property="favouriteViewController" destination="4fx-Zg-vkI" id="8cJ-dT-T9I"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="665" y="140"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7yz-u4-P4f">
+            <objects>
+                <tabBarController id="w6X-QF-0sp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="33b-Or-it5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8vM-9Z-FDj" kind="relationship" relationship="viewControllers" id="Dv9-7J-WR8"/>
+                        <segue destination="Oad-ks-3pR" kind="relationship" relationship="viewControllers" id="UZ2-uW-HEG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9k-p3-kRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1317" y="-402"/>
+        </scene>
+        <!--Факты-->
+        <scene sceneID="v8t-mf-Vj8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8vM-9Z-FDj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Факты" image="idea" id="zqL-YJ-UJ3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tb0-rz-OTR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="De4-92-da2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kK-wB-h4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="-595"/>
+        </scene>
+        <!--Избранное-->
+        <scene sceneID="vmW-Sr-9um">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oad-ks-3pR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Избранное" image="heart" id="1ud-cz-5q1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OU9-SF-dkV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4fx-Zg-vkI" kind="relationship" relationship="rootViewController" id="MwC-7M-kp2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4D-ac-dgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367.19999999999999" y="140.77961019490255"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="30" height="30"/>
+        <image name="idea" width="30" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="p7R-wA-kQ8"/>
+    </inferredMetricsTieBreakers>
+</document>

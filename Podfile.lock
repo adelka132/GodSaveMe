@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Kingfisher (4.10.1)
+  - ObjectMapper (3.4.1)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - ObjectMapper (~> 3.4)
+  - RealmSwift (~> 3.12)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+
+PODFILE CHECKSUM: a05d8cef6600cd72b0073a101ac84f1fd7255c9d
+
+COCOAPODS: 1.5.3
